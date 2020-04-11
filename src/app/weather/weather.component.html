@@ -1,0 +1,38 @@
+<header class="masthead">
+  <div class="mx-auto text-center">
+    <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToAPIXU(weatherSearchForm.value)" class="find-location">
+      <div class="input-group">
+        <input class="form-control" type="text" id="weatherLocation" aria-describedby="weatherLocation"
+          placeholder="Find your Location" formControlName="location" />
+        <div class="input-group-append">
+          <button type="submit" class="btn btn-success btn-md">Find</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="forecast-table">
+    <div class="container">
+      <div class="forecast-container">
+        <div class="today forecast">
+          <div class="forecast-header">
+            <div class="day"> {{ this.weatherData?.location.localtime }} </div>
+            <div class="date"> {{ this.weatherData?.current.observation_time }} </div>
+          </div> <!-- .forecast-header -->
+          <div class="forecast-content">
+            <div class="location"> Location: {{ this.weatherData?.location.name }} ,
+              {{ this.weatherData?.location.country }} </div>
+            <div class="degree">
+              <div class="num"> Temperature: {{ this.weatherData?.current.temperature }} <sup>o</sup>C</div>
+              <div class="forecast-icon">
+                <!--<img [src]="this.weatherData?.current.weather_icons" alt="" width=90>-->
+              </div>
+            </div>
+            <span><img src="assets/images/icon-umberella.png" alt=""> {{ this.weatherData?.current.wind_speed }} %</span>
+            <span><img src="assets/images/icon-wind.png" alt=""> {{ this.weatherData?.current.wind_speed }} km/h</span>
+            <span><img src="assets/images/icon-compass.png" alt=""> {{ this.weatherData?.current.wind_dir }} </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

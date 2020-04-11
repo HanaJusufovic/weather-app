@@ -1,0 +1,171 @@
+  .masthead {
+      width: 100%;
+      height: auto;
+      min-height: 35rem;
+      padding: 15rem 0;
+      background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 75%, #161616 100%), url("../../assets/images/bg-masthead.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+  }
+
+  .find-location {
+      margin-top: -80px;
+      position: relative;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 80px;
+  }
+
+  .find-location input {
+      width: 70%;
+      padding: 25px 80px 25px 25px;
+      color: #4f837f;
+      border-radius: 20px;
+      font-family: 'Varela Round';
+      background-color: #f4f3f3;
+  }
+
+  .find-location button {
+      margin-left: 10px;
+      padding: 0 40px;
+      font-family: 'Varela Round';
+      font-size: 80%;
+      text-transform: uppercase;
+      letter-spacing: .15rem;
+      border: 0;
+      width: 140px;
+      border-radius: 20px;
+      background-color: #64a19d;
+  }
+
+  .find-location button:hover {
+      background-color: #4f837f;
+  }
+
+  .find-location button:focus {
+      background-color: #4f837f;
+      color: white;
+  }
+
+  .find-location button:active {
+      background-color: #467370 !important;
+  }
+
+  .forecast-container {
+      width: 75%;
+      color: #333333;
+      background: #f4f3f3;
+      display: table;
+      table-layout: fixed;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .forecast-container .forecast {
+      display: table-cell;
+      vertical-align: top;
+  }
+
+  @media screen and (max-width: 990px) {
+      .forecast-container .forecast {
+          display: block;
+          width: 16.6667%;
+          float: left;
+      }
+  }
+
+  .forecast-container .forecast.today {
+      width: 420px;
+  }
+
+  .forecast-container .forecast.today .forecast-header {
+      *zoom: 1;
+  }
+
+  .forecast-container .forecast.today .forecast-header:after {
+      content: " ";
+      clear: both;
+      display: block;
+      overflow: hidden;
+      height: 0;
+  }
+
+  .forecast-container .forecast.today .forecast-header .day {
+      float: left;
+  }
+
+  .forecast-container .forecast.today .forecast-header .date {
+      float: right;
+  }
+
+  .forecast-container .forecast.today .forecast-content {
+      text-align: left;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+  .forecast-container .forecast.today .location {
+      font-size: 30px !important;
+      font-size: 1.2857142857em;
+      font-weight: 400;
+      color: #bfd8d5;
+  }
+
+  .forecast-container .forecast.today .degree .num, .forecast-container .forecast.today .degree .forecast-icon {
+      display: inline-block;
+      vertical-align: middle;
+  }
+
+  .forecast-container .forecast.today .degree .num {
+      font-size: 80px !important;
+      font-size: 6.4285714286rem;
+      margin-right: 30px;
+  }
+
+  .forecast-container .forecast.today span {
+      margin-right: 20px;
+  }
+
+  .forecast-container .forecast.today span img {
+      margin-right: 5px;
+      vertical-align: middle;
+  }
+
+  @media screen and (max-width: 990px) {
+      .forecast-container .forecast.today {
+          display: block;
+          width: 100%;
+      }
+  }
+
+  .forecast-container .forecast .forecast-header {
+      background: rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      text-align: center;
+      font-weight: 400;
+  }
+
+  .forecast-container .forecast .forecast-icon {
+      height: 50px;
+  }
+
+  .forecast-container .forecast .forecast-content {
+      padding: 50px 20px 10px;
+      text-align: center;
+  }
+
+  .forecast-container .forecast .forecast-content .forecast-icon {
+      margin-bottom: 20px;
+  }
+
+  .forecast-container .forecast .forecast-content .degree {
+      font-size: 24px;
+      font-size: 1.7142857143em;
+      color: #64a19d;
+      font-weight: 700;
+  }
